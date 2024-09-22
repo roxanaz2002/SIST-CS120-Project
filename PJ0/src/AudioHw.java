@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 import com.synthbot.jasiohost.*;
 
+
 public class AudioHw implements AsioDriverListener {
 	private static final int SAMPLING_TIME_MS = 10000; //sampling time 10s
 	private static final int totalPoint = (SAMPLING_TIME_MS / 1000) * Config.PHY_TX_SAMPLING_RATE;  // sampling freq 48kHz
@@ -137,7 +138,6 @@ public class AudioHw implements AsioDriverListener {
 					// for (int i = 0; i < Math.min(3, samplesToCopy); i++) {
 					// 	System.out.println("tempBuffer[" + i + "] = " + tempBuffer[i]);
 					// }
-					// 读取数据
 				}
 			}
 		}

@@ -1,12 +1,11 @@
 # LEC0 and Project 0
 
-## Project0 
+## Project0
 
 some knowledge points
 
 - Listener 监听器：ASIO driver 变化后 启动callback method（回调 方法）
 - 代码开始时add Listener
-
 
 ### 双缓冲技术
 
@@ -17,3 +16,11 @@ some knowledge points
 **切换机制** ：一旦一个缓冲区的处理完成，系统会切换到另一个缓冲区，然后重新开始处理当前缓冲区的数据。这种切换通常在完成读取或写入操作时进行。
 
 **减少延迟和提升性能** ：双缓冲技术可以显著降低数据处理的延迟，因为它允许在处理当前数据的同时，准备下一个数据块。此外，这种方法还可以提高整体吞吐量，使系统更高效。
+
+## Project1
+
+### CRC
+
+循环冗余检查：它通过在发送数据时附加冗余位来实现。如果接收端计算出的CRC与接收到的CRC不匹配，则可以认为数据发生了错误。
+
+`frame_crc = generate(crc8, frame);` 会生成一个108位的帧，其中包含了100位的数据和8位的CRC校验位。
