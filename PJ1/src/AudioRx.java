@@ -3,7 +3,7 @@ import java.util.Set;
 import com.synthbot.jasiohost.*;
 
 
-public class AudioHw implements AsioDriverListener {
+public class AudioRx implements AsioDriverListener {
 	private static final int SAMPLING_TIME_MS = 10000; //sampling time 10s
 	private static final int totalPoint = (SAMPLING_TIME_MS / 1000) * Config.PHY_TX_SAMPLING_RATE;  // sampling freq 48kHz
 	private AsioDriver asioDriver;
@@ -199,7 +199,7 @@ public class AudioHw implements AsioDriverListener {
 
   	public static void main(final String[] args) {
 		
-		final AudioHw audiohw = new AudioHw();
+		final AudioRx audiohw = new AudioRx();
 		audiohw.init();
 		audiohw.startRecording();
 		try {
